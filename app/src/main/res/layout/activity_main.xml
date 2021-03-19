@@ -17,6 +17,7 @@
             android:id="@+id/TILWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:hint="Weight in KiloGrams" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -32,7 +33,8 @@
             android:id="@+id/TILHeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Height in Meters" />
+            android:inputType="number"
+            android:hint="Height in Centimeters" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -69,14 +71,25 @@
         android:id="@+id/tvBMIinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bmi_info"
-        android:textSize="100sp"
         android:gravity="center"
+        android:text="@string/bmi_info"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCalculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/representation"
+        android:layout_width="276dp"
+        android:layout_height="326dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/tvBMIinfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/normal_size" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
